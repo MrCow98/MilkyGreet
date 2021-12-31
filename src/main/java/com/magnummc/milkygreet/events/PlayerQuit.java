@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
+import utils.ColorHelper;
 
 public class PlayerQuit implements Listener {
     private final MilkyGreet plugin;
@@ -18,11 +19,13 @@ public class PlayerQuit implements Listener {
     public void onPlayerQuit(PlayerQuitEvent e){
         Player player = e.getPlayer();
         String message = plugin.getConfig().getString("quit-message");
+
+
         if (message == null) {
             return;
         }
         message = message.replace("%player%", player.getName());
-        e.setQuitMessage(message);
+        e.setQuitMessage(ColorHelper.translate(message));
 
     }
 

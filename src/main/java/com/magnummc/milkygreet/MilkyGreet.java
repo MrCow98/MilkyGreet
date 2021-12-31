@@ -2,11 +2,13 @@ package com.magnummc.milkygreet;
 
 import com.magnummc.milkygreet.events.PlayerJoin;
 import com.magnummc.milkygreet.events.PlayerQuit;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 public final class MilkyGreet extends JavaPlugin {
+
+    public static void lg(String s) {
+    }
 
     @Override
     public void onEnable() {
@@ -28,6 +30,7 @@ public final class MilkyGreet extends JavaPlugin {
         System.out.println(getConfig().getString("stop-message"));
 
     }
+
 
 
 

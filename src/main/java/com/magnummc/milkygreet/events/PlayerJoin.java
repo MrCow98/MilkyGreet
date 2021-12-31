@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import utils.ColorHelper;
 
 public class PlayerJoin implements Listener {
     private final MilkyGreet plugin;
@@ -18,11 +19,13 @@ public class PlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
         String message = plugin.getConfig().getString("join-message");
+
         if (message == null) {
             return;
         }
         message = message.replace("%player%", player.getName());
-        e.setJoinMessage(message);
+        e.setJoinMessage(ColorHelper.translate(message));
+
 
 
     }
