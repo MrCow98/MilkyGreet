@@ -1,18 +1,24 @@
 package com.magnummc.milkygreet;
 
-import events.PlayerJoin;
-import events.PlayerQuit;
+import com.magnummc.milkygreet.events.PlayerJoin;
+import com.magnummc.milkygreet.events.PlayerQuit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.sql.SQLOutput;
 
 public final class MilkyGreet extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
 
-        System.out.println("MilkyGreet has been enabled.");
+        System.out.println(getConfig().getString("startup-message"));
+        System.out.println(getConfig().getString("stop-message"));
 
-        getServer().getPluginManager().registerEvents(new PlayerJoin(),this);
-        getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoin(this),this);
+        getServer().getPluginManager().registerEvents(new PlayerQuit(this), this);
+
+
 
     }
 
