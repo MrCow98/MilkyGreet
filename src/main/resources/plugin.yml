@@ -1,0 +1,7 @@
+name: MilkyGreet
+version: '${version}'
+main: com.magnummc.milkygreet.MilkyGreet
+api-version: 1.18
+authors: [ MrCow98 ]
+description: A plugin that will welcome your players when they join and wish them goodbye when they leave!
+website: https://github.com/MrCow98
