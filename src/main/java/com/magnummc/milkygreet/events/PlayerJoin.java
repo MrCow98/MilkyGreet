@@ -14,7 +14,6 @@ public class PlayerJoin implements Listener {
         System.out.println("Created PlayerJoin instance!");
     }
 
-
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
