@@ -1,7 +1,6 @@
 package com.magnummc.milkygreet.events;
 
 import com.magnummc.milkygreet.MilkyGreet;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,7 +20,6 @@ public class PlayerQuit implements Listener {
         String message = plugin.getConfig().getString("join-message").replace("%player%", player.getName());
         player.sendMessage(message);
 
-        e.setQuitMessage(ChatColor.GRAY + "[" + ChatColor.RED + "-" + ChatColor.GRAY + "] " + ChatColor.GOLD + ChatColor.BOLD + player.getDisplayName());
     }
 
 

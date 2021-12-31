@@ -8,3 +8,6 @@ stop-message: "Shutting down MilkyGreet..."
 # This section will change what the plugin says when a player joins, and when a player leaves
 join-message: "Welcome %player%"
 quit-message: "Goodbye %player%"
+
+# DO NOT TOUCH! This handles the reload command.
+reload-command: "/greet reload"

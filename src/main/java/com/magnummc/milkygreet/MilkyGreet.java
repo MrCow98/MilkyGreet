@@ -4,16 +4,16 @@ import com.magnummc.milkygreet.events.PlayerJoin;
 import com.magnummc.milkygreet.events.PlayerQuit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.sql.SQLOutput;
 
 public final class MilkyGreet extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // saves the config
         saveDefaultConfig();
 
+        //
         System.out.println(getConfig().getString("startup-message"));
-        System.out.println(getConfig().getString("stop-message"));
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(this),this);
         getServer().getPluginManager().registerEvents(new PlayerQuit(this), this);
@@ -22,10 +22,12 @@ public final class MilkyGreet extends JavaPlugin {
 
     }
 
-
     @Override
     public void onDisable() {
-        System.out.println("MilkyGreet has been disabled.");
+        System.out.println(getConfig().getString("stop-message"));
 
     }
+
+
+
 }
