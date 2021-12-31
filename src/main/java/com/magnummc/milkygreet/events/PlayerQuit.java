@@ -17,8 +17,12 @@ public class PlayerQuit implements Listener {
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e){
         Player player = e.getPlayer();
-        String message = plugin.getConfig().getString("join-message").replace("%player%", player.getName());
-        player.sendMessage(message);
+        String message = plugin.getConfig().getString("quit-message");
+        if (message == null) {
+            return;
+        }
+        message = message.replace("%player%", player.getName());
+        e.setQuitMessage(message);
 
     }
 

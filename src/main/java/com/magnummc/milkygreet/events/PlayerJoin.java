@@ -11,15 +11,18 @@ public class PlayerJoin implements Listener {
     public PlayerJoin(MilkyGreet plugin) {
         this.plugin = plugin;
         System.out.println("Created PlayerJoin instance!");
-
     }
 
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
-        String message = plugin.getConfig().getString("join-message").replace("%player%", player.getName());
-        player.sendMessage(message);
+        String message = plugin.getConfig().getString("join-message");
+        if (message == null) {
+            return;
+        }
+        message = message.replace("%player%", player.getName());
+        e.setJoinMessage(message);
 
 
     }
