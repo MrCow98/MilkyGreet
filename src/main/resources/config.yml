@@ -1,14 +1,10 @@
-// Welcome to MilkyGreet! This is my second functioning plugin, created by MrCow98.
-// Please feel free to check out my github for more updated versions of this plugin.
-// If you think there's anything I can do to improve my code, or any suggestions you might have,
-// reach out to me on discord or through github! Here's my discord > MrCow98#9427
-// https://github.com/MrCow98/MilkyGreet
-// Also major thanks to dkim19375 for helping out a load! https://github.com/dkim19375
+# https://github.com/MrCow98/MilkyGreet
+# Also major thanks to dkim19375 for helping out a load! https://github.com/dkim19375
 
-// This section will be what the plugin says when it starts and stops. (no need to touch this though)
+# This section will be what the plugin says when it starts and stops. (no need to touch this though)
 startup-message: "Welcome to MilkyGreet!"
 stop-message: "Shutting down MilkyGreet..."
 
-// This section will change what the plugin says when a player joins, and when a player leaves
+# This section will change what the plugin says when a player joins, and when a player leaves
 join-message: "Welcome %player%"
 quit-message: "Goodbye %player%"
