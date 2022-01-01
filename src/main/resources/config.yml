@@ -1,5 +1,6 @@
 # https://github.com/MrCow98/MilkyGreet
 # Also major thanks to dkim19375 for helping out a ton https://github.com/dkim19375
+# Another major thanks to Blitz from HelpChat for helping a ton https://github.com/BlitzOffline
 
 # This section will be what the plugin says when it starts and stops. (no need to touch this though)
 startup-message: "Welcome to MilkyGreet!"
@@ -9,5 +10,7 @@ stop-message: "Shutting down MilkyGreet..."
 join-message: "Welcome %player%"
 quit-message: "Goodbye %player%"
 
-# DO NOT TOUCH! This handles the reload command.
-reload-command: "/greet reload"
+
+# This plugins reload command is /milkygreet reload
+# For permissions to the command use milkygreet.reload
+
